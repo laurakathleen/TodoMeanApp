@@ -35,7 +35,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory){
 			if (data.data.updatedExisting){
 				_t.isCompleted = cbk;
 			} else {
-				alert('Oops something went wrong!');
+				console.log('Oops something went wrong while updating!');
 			}
 		});
 	};
@@ -53,7 +53,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory){
 					_t.todo = $event.target.value.trim();
 					$scope.isEditable[i] = false;
 				} else {
-					alert('Oops something went wrong!');
+					console.log('Oops something went wrong while editting!');
 				}
 			});
 		}
